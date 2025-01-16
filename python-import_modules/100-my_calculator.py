@@ -12,7 +12,8 @@ if __name__ == "__main__":
     if op in ops:
         value = ops[op](sys.argv[1], sys.argv[3])
         print(f"{sys.argv[1]} {op} {sys.argv[3]} = {value}")
+        sys.exit(0)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
-
+        sys.exit(1)
     
