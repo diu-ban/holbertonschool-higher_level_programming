@@ -6,6 +6,6 @@ if __name__ == "__main__":
     print("{} argument{}{}".format(l - 1, 's' if l-1 != 1 else '', '.' if l < 2 else ':'))
     if (l >= 2):
         for i in range(l):
-            print("{}:{}".format(i+1, sys.argv[i+1]))
+            print("{}: {}".format(i+1, sys.argv[i+1]))
 
 
