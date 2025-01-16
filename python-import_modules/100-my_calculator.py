@@ -12,8 +12,8 @@ if __name__ == "__main__":
     b = int(argv[3])
     ops = {'+' : add, '-' : sub, '*' : mul, '/' : div}
     if op in ops:
-        value = ops[op](sys.argv[1], sys.argv[3])
-        print(f"{sys.argv[1]} {op} {sys.argv[3]} = {value}")
+        value = ops[op](a, b)
+        print(f"{a} {op} {b} = {value}")
         exit(0)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
