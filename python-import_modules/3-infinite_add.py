@@ -6,5 +6,5 @@ if __name__ == "__main__":
     sum = 0
     if (l >= 2):
         for i in range(l):
-            sum += int(sys.argv[l+1])
+            sum += int(sys.argv[i])
     print(sum)
