@@ -5,5 +5,5 @@ def print_list_integer(my_list=[]):
         return
     else:
         for i in range(size):
-            print("{}".format(my_list[i]))
+            print("{:d}".format(my_list[i]))
 
