@@ -1,0 +1,22 @@
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem.")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ 
+Quonam modo?
+ 
+Utrum igitur tibi litteram videor an totas paginas commovere?
+ 
+Non autem hoc:
+ 
+igitur ne illud quidem.
+>>> text_indentation("Hello. How are you? I hope you're well.")
+Hello.
+ 
+How are you?
+ 
+I hope you're well.
+>>> text_indentation("No spaces   here. Look!    It should handle   the spaces.")
+No spaces   here.
+ 
+Look!
+ 
+It should handle   the spaces.
