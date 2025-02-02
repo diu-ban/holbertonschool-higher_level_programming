@@ -120,6 +120,7 @@ class Rectangle:
             return rect_1
         return rect_2
 
+    @classmethod
     def square(cls, size=0):
         """
         Creates a new Rectangle instance where the width and height are equal to size.

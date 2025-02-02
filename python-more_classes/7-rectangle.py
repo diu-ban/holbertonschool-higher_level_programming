@@ -10,7 +10,7 @@ class Rectangle:
     """
 
     number_of_instances = 0
-    print_symbol = '#'
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Initializes a square with an optional size.
@@ -81,7 +81,7 @@ class Rectangle:
         """Returns a string representation of the rectangle with '#' characters."""
         if self.width == 0 or self.height == 0:
             return ""
-        return "\n".join([str(Rectangle.print_symbol) * self.width] * self.height)
+        return "\n".join([str(self.print_symbol) * self.width] * self.height)
     
     def __repr__(self):
         """
