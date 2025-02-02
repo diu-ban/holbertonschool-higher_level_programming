@@ -47,7 +47,7 @@ class Rectangle:
         return self.__height
     
     @height.setter
-    def width(self, value):
+    def height(self, value):
         """Sets the height of the rectangle with validation.
         
         Args:
