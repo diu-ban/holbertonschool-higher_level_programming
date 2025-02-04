@@ -64,3 +64,4 @@ class Rectangle(BaseGeometry):
             int: The area of the rectangle.
         """
         return self.__width * self.__height
+    
