@@ -11,14 +11,14 @@ class Shape(ABC):
         pass
 
 class Circle(Shape):
-    def __init__(self, rad):
-        self.rad = rad
+    def __init__(self, radius):
+        self.radius = radius        
 
     def area(self):
-        return 3.14 * self.rad ** 2
+        return 3.14 * self.radius ** 2
     
     def perimeter(self):
-        return 2 * 3.14 * self.rad
+        return 2 * 3.14 * self.radius
 
 class Rectangle(Shape):
     def __init__(self, width, height):
