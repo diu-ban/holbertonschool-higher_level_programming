@@ -21,5 +21,5 @@ def read_file(filename=""):
         FileNotFoundError: If the specified file does not exist.
         IOError: If there is an issue reading the file.
     """
-    with open(filename, "r", encoding = "utf-8") as file:
+    with open(filename, "r") as file:
         print(file.read())
