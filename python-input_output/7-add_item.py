@@ -10,6 +10,7 @@ appends new command-line arguments to it, and then saves the updated list.
 """
 
 import sys
+import json
 
 filename = "add_item.json"
 
