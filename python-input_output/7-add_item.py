@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 
 """
-Module: load_json
+Module: add_items_to_json
 
-Module that adds all command-line arguments to a list,
-and saves them to a JSON file (add_item.json).
+This module adds all command-line arguments to a list,
+and saves the list to a JSON file named 'add_item.json'.
+It loads the existing content of 'add_item.json' (if any),
+appends new command-line arguments to it, and then saves the updated list.
 """
 
 import sys
