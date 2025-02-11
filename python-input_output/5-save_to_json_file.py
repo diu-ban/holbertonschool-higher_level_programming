@@ -1,25 +1,21 @@
 #!/usr/bin/python3
 """
-Module: load_json
+Module: save_to_json
 This module provides a function to load data from a JSON file.
 """
 
 import json
 
-def load_from_json_file(filename):
+def save_to_json_file(my_obj, filename):
     """
-    Load and return data from a JSON file.
+    Writes an object to a text file, using a JSON representation.
 
     Args:
-        filename (str): The name of the JSON file to read from.
+        my_obj (object): The object to serialize into JSON.
+        filename (str): The name of the file to save the JSON data.
 
     Returns:
-        object: The Python object (dict, list, etc.) represented by the JSON data.
-
-    Raises:
-        FileNotFoundError: If the specified file does not exist.
-        json.JSONDecodeError: If the file content is not valid JSON.
-        UnicodeDecodeError: If the file cannot be decoded using UTF-8.
+        None
     """
-    with open(filename, "r", encoding="utf-8") as f:
-        return json.load(f) 
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(my_obj, f)
