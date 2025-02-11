@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-import json
 
 """
 Module: from_json_string
 
 This module provides a function to deserialize a JSON string into a Python object.
 """
+
+import json
 
 def from_json_string(my_str):
     """

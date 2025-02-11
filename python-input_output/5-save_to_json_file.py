@@ -22,4 +22,4 @@ def load_from_json_file(filename):
         UnicodeDecodeError: If the file cannot be decoded using UTF-8.
     """
     with open(filename, "r", encoding="utf-8") as f:
-        return json.load(f)  # Corrected from json.loads(f)
+        return json.load(f) 

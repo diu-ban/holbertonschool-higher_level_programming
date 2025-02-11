@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 """
-Script that adds all command-line arguments to a list,
+Module: load_json
+
+Module that adds all command-line arguments to a list,
 and saves them to a JSON file (add_item.json).
 """
 
