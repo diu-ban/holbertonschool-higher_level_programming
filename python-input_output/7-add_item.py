@@ -12,8 +12,6 @@ appends new command-line arguments to it, and then saves the updated list.
 import sys
 import json
 
-filename = "add_item.json"
-
 def save_to_json_file(my_obj, filename):
     """
     Writes an object to a text file, using a JSON representation.
@@ -52,6 +50,7 @@ def main():
     
     The list is saved as a JSON representation in 'add_item.json'.
     """
+    filename = "add_item.json"
     try: 
         items = load_from_json_file(filename)
     except (FileNotFoundError, ValueError):
