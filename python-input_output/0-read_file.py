@@ -22,4 +22,4 @@ def read_file(filename=""):
         IOError: If there is an issue reading the file.
     """
     with open(filename, "r") as file:
-        print(file.read())
+        print(file.read(), end="")
