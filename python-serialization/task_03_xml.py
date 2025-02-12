@@ -22,15 +22,16 @@ def deserialize_from_xml(filename):
             key = child.tag
             value = child.text
             
-            if value.isdigit():
-                value = int(value)
-            elif value.lower() in ['true', 'false']:
-                value = value.lower() == 'true'
-            else:
-                try:
-                    value = float(value)
-                except ValueError:
-                    pass  
+            # if value.isdigit():
+            #     value = int(value)
+            # elif value.lower() in ['true', 'false']:
+            #     value = value.lower() == 'true'
+            # else:
+            #     try:
+            #         value = float(value)
+            #     except ValueError:
+            #         pass  
+            
 
             result[key] = value
 
