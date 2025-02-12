@@ -8,7 +8,7 @@ def convert_csv_to_json(filename):
         with open(filename, "r") as file:
             reader = csv.DictReader(file)
             with open("data.json", "w") as f:
-                json.dump(f)
+                json.dump(reader, f)
         return True
     except (FileNotFoundError) as e:
         return False
