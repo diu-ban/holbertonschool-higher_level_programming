@@ -3,9 +3,9 @@
 import json
 
 def serialize_and_save_to_file(data, filename):
-    with open(filename, "w", encoding="utf-8"):
-        json.dump(data, filename)
+    with open(filename, "w", encoding="utf-8") as file:
+        json.dump(data, file) if type(data) != str else json.dumps(data, file)
 
 def load_and_deserialize(filename):
-    with open(filename, "r", encoding="utf-8"):
-        return json.load(filename)
+    with open(filename, "r", encoding="utf-8") as file:
+        return json.load(file)
