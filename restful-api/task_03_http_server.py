@@ -13,7 +13,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
         elif self.path == "/data":
             response = {"name": "John", "age": 30, "city": "New York"}
         elif self.path == "/status":
-            response = {"status": "OK"}
+            response = "OK"
         elif self.path == "/info":
             response = {"version": "1.0", "description": "A simple API built with http.server"}
         else:
