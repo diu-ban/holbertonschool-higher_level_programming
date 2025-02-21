@@ -4,23 +4,31 @@ import json
 class SimpleAPIHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
-        self.send_response(200)
-        self.send_header("Content-Type", "application/json")
-        self.end_headers()
-
         if self.path == "/":
-            response = "Hello, this is a simple API!"
+            self.send_response(200)
+            self.send_header("Content-Type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"Hello, this is a simple API!")  
+        
         elif self.path == "/data":
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
             response = {"name": "John", "age": 30, "city": "New York"}
-        elif self.path == "/status":
-            response = "OK"
-        elif self.path == "/info":
-            response = {"version": "1.0", "description": "A simple API built with http.server"}
-        else:
-            self.send_response(404) 
-            response = "Endpoint not found"
+            self.wfile.write(json.dumps(response).encode("utf-8"))
 
-        self.wfile.write(json.dumps(response).encode("utf-8"))
+        elif self.path == "/status":
+            self.send_response(200)
+            self.send_header("Content-Type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"OK")
+
+        else:
+            self.send_response(404)
+            self.send_header("Content-Type", "application/json")
+            self.end_headers()
+            response = {"error": "Endpoint not found"}
+            self.wfile.write(json.dumps(response).encode("utf-8"))
 
 def run(server_class=HTTPServer, handler_class=SimpleAPIHandler, port=8000):
     server_address = ("", port)
