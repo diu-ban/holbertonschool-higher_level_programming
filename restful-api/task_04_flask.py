@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from flask import Flask
-from Flask import jsonify, requests
+from flask import flask
+from flask import jsonify, requests
 
-app = Flask(__name__)
+app = flask(__name__)
 users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
 
 @app.route("/")
