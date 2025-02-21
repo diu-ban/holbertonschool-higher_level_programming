@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 from flask import Flask
 from Flask import jsonify, requests
 
