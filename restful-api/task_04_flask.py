@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, requests
+from flask import Flask, jsonify, request
 app = Flask(__name__)
 users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
 
@@ -25,7 +25,7 @@ def get_user(usermame):
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
-    data = requests.get_json()
+    data = request.get_json()
     if not data or "username" not in data:
         return jsonify({"error": "Username is required"}), 400
     username = data["username"]
