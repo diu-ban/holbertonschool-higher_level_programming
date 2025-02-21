@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask, jsonify, request
 app = Flask(__name__)
 users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
@@ -10,18 +11,18 @@ if __name__ == "__main__": app.run()
 
 @app.route("/data")
 def get_users():
-    return jsonify(list(users.keys))
+    return list(users.keys())
 
 @app.route("/status")
 def get_status():
     return "OK"
 
 @app.route("/users/<username>")
-def get_user(usermame):
-    user = users.get(usermame)
+def get_user(username):
+    user = users.get(username)
     if user:
-        return jsonify(user)
-    return jsonify({"error":"User not found"})
+        return user
+    return {"error":"User not found"}
 
 @app.route("/add_user", methods=["POST"])
 def add_user():
