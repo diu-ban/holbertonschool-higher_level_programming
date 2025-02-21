@@ -9,7 +9,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
         self.end_headers()
 
         if self.path == "/":
-            response = {"message": "Hello, this is a simple API!"}
+            response = "Hello, this is a simple API!"
         elif self.path == "/data":
             response = {"name": "John", "age": 30, "city": "New York"}
         elif self.path == "/status":
@@ -18,7 +18,7 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             response = {"version": "1.0", "description": "A simple API built with http.server"}
         else:
             self.send_response(404) 
-            response = {"error": "Endpoint not found"}
+            response = "Endpoint not found"
 
         self.wfile.write(json.dumps(response).encode("utf-8"))
 
