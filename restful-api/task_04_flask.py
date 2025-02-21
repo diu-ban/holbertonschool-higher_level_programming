@@ -1,6 +1,4 @@
-from flask import Flask
-from Flask import jsonify, requests
-
+from flask import Flask, jsonify, requests
 app = Flask(__name__)
 users = {"jane": {"name": "Jane", "age": 28, "city": "Los Angeles"}}
 
