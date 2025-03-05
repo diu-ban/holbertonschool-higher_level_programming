@@ -1,2 +1,2 @@
 -- 6-list_values.sql
-SHOW ROWS;
+SHOW ROWS FROM first_table;
