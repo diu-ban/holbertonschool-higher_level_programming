@@ -1,7 +1,7 @@
 -- 6-states.sql
 CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 
-USE hbtn_0d_usa; 
+USE IF EXISTS hbtn_0d_usa; 
 
 CREATE TABLE IF NOT EXISTS states (
     id INT DEFAULT 1 NOT NULL AUTO_INCREMENT UNIQUE PRIMARY KEY,
