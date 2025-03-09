@@ -54,4 +54,4 @@ if __name__ == '__main__':
     Main execution block that retrieves
     command-line arguments and calls list_states.
     """
-    list_N_states(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    list_states(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
