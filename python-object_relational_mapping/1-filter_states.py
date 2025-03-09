@@ -26,9 +26,9 @@ def list_N_states(username, password, db_name):
         db_name (str): Database name.
     """
     db = MySQLdb.connect(
-        host='localhost', 
-        user=username, 
-        passwd=password, 
+        host='localhost',
+        user=username,
+        passwd=password,
         db=db_name, port=3306
         )
     cursor = db.cursor()
@@ -43,6 +43,8 @@ def list_N_states(username, password, db_name):
 
 
 if __name__ == '__main__':
-    """Main execution block that retrieves command-line arguments and calls list_states."""
+    """
+    Main execution block that retrieves 
+    command-line arguments and calls list_states.
+    """
     list_N_states(sys.argv[1], sys.argv[2], sys.argv[3])
-    
