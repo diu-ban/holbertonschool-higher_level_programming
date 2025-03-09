@@ -44,7 +44,7 @@ def list_N_states(username, password, db_name):
 
 if __name__ == '__main__':
     """
-    Main execution block that retrieves 
+    Main execution block that retrieves
     command-line arguments and calls list_states.
     """
     list_N_states(sys.argv[1], sys.argv[2], sys.argv[3])
