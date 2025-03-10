@@ -36,7 +36,7 @@ def list_cities(username, password, db_name):
         "SELECT cities.id, cities.name, states.name "
         "FROM cities "
         "JOIN states ON cities.state_id = states.id"
-        "ORDER BY cities.id;"
+        "ORDER BY id"
         )
 
     for state in cursor.fetchall():
