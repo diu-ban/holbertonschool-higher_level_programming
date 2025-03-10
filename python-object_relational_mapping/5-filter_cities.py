@@ -52,7 +52,7 @@ def list_cities(username, password, db_name, state_name):
 
     cities = cursor.fetchall()
     cities_list = [city for subtuple in cities for city in subtuple]
-    print(city for city in cities_list)
+    print(", ".join(cities_list))
 
     cursor.close()
     db.close()
