@@ -20,9 +20,5 @@ if __name__ == "__main__":
     session.add(state)
     session.commit()
 
-    new_state = session.query(State).filter(state.name == "Louisiana").first()
-    if new_state: 
-        print(new_state.id)
-    else:
-        print("Not found")    
+    print(state.id)   
     session.close()
