@@ -51,7 +51,7 @@ def list_cities(username, password, db_name, state_name):
     cursor.execute(query, (state_name,))
 
     cities = []
-    cities.append(city for city in cursor.fetchall())
+    cities.append(city for city in list(cursor.fetchall()))
     print(cities)
 
     cursor.close()
