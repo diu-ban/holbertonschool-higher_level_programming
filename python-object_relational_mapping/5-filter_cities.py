@@ -51,8 +51,9 @@ def list_cities(username, password, db_name, state_name):
     cursor.execute(query, (state_name,))
 
     cities = cursor.fetchall()
-    print(cities)
-
+    cities_list = [city for subtuple in cities for city in subtuple]
+    print(cities_list)
+    
     cursor.close()
     db.close()
 
