@@ -43,7 +43,7 @@ def list_states(username, password, db_name, state_name):
         "SELECT * FROM states "
         "WHERE BINARY name LIKE %s ORDER BY id"
         )
-    cursor.execute(query, state_name)
+    cursor.execute(query, (state_name,))
 
     for state in cursor.fetchall():
         print(state)
