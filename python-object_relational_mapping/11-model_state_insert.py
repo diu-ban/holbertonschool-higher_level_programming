@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     new_state = session.query(State).filter(state.name == "Louisiana").first()
     if new_state: 
-        print(state.id)
+        print(new_state.id)
     else:
         print("Not found")    
     session.close()
