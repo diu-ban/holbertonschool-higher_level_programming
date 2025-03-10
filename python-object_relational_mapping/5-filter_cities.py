@@ -43,7 +43,7 @@ def list_cities(username, password, db_name, state_name):
     cursor = db.cursor()
 
     query = (
-        "SELECT name FROM cities "
+        "SELECT cities.name FROM cities "
         "JOIN states ON cities.state_id = states.id "
         "WHERE BINARY states.name = %s "
         "ORDER BY cities.id"
