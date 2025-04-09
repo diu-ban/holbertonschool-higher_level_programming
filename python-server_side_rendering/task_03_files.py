@@ -85,7 +85,7 @@ def products():
         with open("products.csv") as csv_products:
             data = list(csv.DictReader(csv_products))
     else:
-        data = "error 1"
+        data = "error"
 
     if id:
         data =[item for item in data if int(item['id']) == id ]
