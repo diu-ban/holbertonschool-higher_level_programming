@@ -1,15 +1,15 @@
-{% extends "index.html" %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>My Flask App</title>
+</head>
 
 <body>
-    {% block content %}
-    <h1>Contact Us</h1>
-    <p>
-        We'd love to hear from you! Whether you have a question,
-        feedback, or need assistance, our team is here to help.
-        Reach out to us via email, phone, or through the contact form below,
-        and we'll get back to you as soon as possible.
-        Your inquiries are important to us,
-        and we look forward to connecting with you!
-    </p>
-    {% endblock %}
+  {% include "./header.html" %}
+  <h1>Contact Us</h1>
+  <p>This is our Contact us page.</p>
+  {% include "./footer.html" %}
 </body>
+
+</html>
