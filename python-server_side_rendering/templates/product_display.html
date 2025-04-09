@@ -10,8 +10,8 @@
 
     {% if not products %}
     <h1>Product not found</h1>
-    {% elif products == "error" %}
-    <h1>Wrong source</h1>
+    {% elif error %}
+    <h1>{{error}}</h1>
     {% else%}
         <table>
             <caption>Product Display</caption>
