@@ -7,15 +7,14 @@
 
     <body>
         {% include "./header.html" %}
-        <h1>Items</h1>
-        {% if items[] == [] or not items %}
-        <p>No items found</p>
+        {% if items.get("items") %}
+            <ul>
+                {% for i in items["items"] %}
+                <li>{{ i }}</li>
+                {%endfor%}
+            </ul>
         {% else %}
-        <ul>
-        {% for i in items["items"] %}
-        <li>{{ i }}</li>
-        {% endfor %}
-        </ul>
+            <p>No items found</p>
         {% endif %}
         {% include "./footer.html" %}
     </body>
