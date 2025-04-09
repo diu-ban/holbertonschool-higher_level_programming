@@ -8,10 +8,10 @@
 <body>
     {% include "header.html" %}
 
-    {% if not products %}
-    <h1>Product not found</h1>
-    {% elif error %}
+    {% if error %}
     <h1>{{error}}</h1>
+    {% elif not products %}
+    <h1>Product not found</h1>
     {% else%}
         <table>
             <caption>Product Display</caption>
