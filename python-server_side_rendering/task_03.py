@@ -40,7 +40,7 @@ def products():
     if id:
         data = [item for item in data if int(item['id']) == id]
 
-    return render_template('product_display.html', products = data),200
+    return render_template('product_display.html', products = data)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
