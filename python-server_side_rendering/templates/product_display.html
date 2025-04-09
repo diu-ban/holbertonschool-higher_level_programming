@@ -6,28 +6,29 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
-        <caption>Product List</caption>
-        <thead>
+    {% include "header.html" %}
+
+    {% if not products %}
+    <h1>Product not found</h1>
+    {% elif products == "error 1" %}
+    <h1>Wrong source</h1>
+    {% else%}
+        <table>
+            <caption>Product Display</caption>
             <tr>
-                {% for header in headers %}
-                <th>{{ header }}</th>
-                {% endfor %}
+                <th>Name</th>
+                <th>Category</th>
+                <th>Price</th>
             </tr>
-        </thead>
-        <tbody>
+            {% for items in products %}
             <tr>
-                {% for product in products %}
-                <td>{{  product.id  }}</td>
-                <td>{{  product.name }}</td>
-                <td>{{  product.category }}</td>
-                <td>{{  product.price }}</td>
+                <td>{{items.get('name')}}</td>
+                <td>{{items.get('category')}}</td>
+                <td>{{items.get('price')}}</td>
             </tr>
-                {% endfor %}
-        </tbody>
-    </table>
-    {% if error %}
-    <p> {{ error }}</p>
+            {% endfor %}
+        </table> 
     {% endif %}
-    </body>
+    {% include "footer.html" %}
+</body>
 </html>
