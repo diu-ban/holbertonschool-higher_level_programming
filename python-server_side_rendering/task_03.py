@@ -1,4 +1,5 @@
-from flask import Flask, render_template, json, csv, request
+from flask import Flask, render_template, request
+import  json, csv
 
 app = Flask(__name__)
 
@@ -39,7 +40,7 @@ def products():
     if id:
         data = [item for item in data if int(item['id']) == id]
 
-    return render_template('product_display.html', products = data)
+    return render_template('product_display.html', products = data),200
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
